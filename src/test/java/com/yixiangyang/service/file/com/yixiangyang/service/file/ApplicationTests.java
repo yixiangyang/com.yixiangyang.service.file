@@ -53,4 +53,8 @@ public class ApplicationTests {
 		//client.delete_file(group_name, remote_filename);
 		
 	}
+	
+	public void aa() {
+		
+	}
 }
