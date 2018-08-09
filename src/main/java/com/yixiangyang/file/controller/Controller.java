@@ -63,6 +63,8 @@ public class Controller {
 		
 	}
 	
+	
+	
 //	@RequestMapping(value={"/v1/file/_delete"}, method={RequestMethod.DELETE}, produces={"application/json"})
 //	public ResponseEntity<Boolean> deleteResorce(@RequestParam("url") String url) {
 //		if(url == null || url.trim().length() ==0 ) {
