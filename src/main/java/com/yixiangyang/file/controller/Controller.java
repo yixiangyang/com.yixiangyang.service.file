@@ -8,12 +8,12 @@ import javax.annotation.Resource;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 
-import org.csource.common.MyException;
-import org.csource.common.NameValuePair;
-import org.csource.fastdfs.StorageClient;
-import org.csource.fastdfs.StorageServer;
-import org.csource.fastdfs.TrackerClient;
-import org.csource.fastdfs.TrackerServer;
+//import org.csource.common.MyException;
+//import org.csource.common.NameValuePair;
+//import org.csource.fastdfs.StorageClient;
+//import org.csource.fastdfs.StorageServer;
+//import org.csource.fastdfs.TrackerClient;
+//import org.csource.fastdfs.TrackerServer;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -37,31 +37,31 @@ public class Controller {
 		return new ResponseEntity<String[]>(files, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="/v1/download_file",method=RequestMethod.GET)
-	public void downloadFile(HttpServletResponse response) throws IOException, MyException {
-		TrackerClient tracker = new TrackerClient();
-		TrackerServer trackerServer = tracker.getConnection();
-		StorageServer storageServer = null;
-		StorageClient client = new StorageClient(trackerServer, storageServer);
-		byte[] bytes= client.download_file("group1", "M00/00/00/rBBln1tqkDSAKS72AAFvuzCOObk467.png");
-		NameValuePair nvps[]= client.get_metadata("group1", "M00/00/00/rBBln1tqkDSAKS72AAFvuzCOObk467.png");
-		response.setHeader("content-disposition", "attachment;filename="+URLEncoder.encode(nvps[1].getValue(), "UTF-8"));
-		ServletOutputStream outputStream = null;
-        try {
-            outputStream = response.getOutputStream();
-            outputStream.write(bytes);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                outputStream.flush();
-                outputStream.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-		
-	}
+//	@RequestMapping(value="/v1/download_file",method=RequestMethod.GET)
+//	public void downloadFile(HttpServletResponse response) throws IOException, MyException {
+//		TrackerClient tracker = new TrackerClient();
+//		TrackerServer trackerServer = tracker.getConnection();
+//		StorageServer storageServer = null;
+//		StorageClient client = new StorageClient(trackerServer, storageServer);
+//		byte[] bytes= client.download_file("group1", "M00/00/00/rBBln1tqkDSAKS72AAFvuzCOObk467.png");
+//		NameValuePair nvps[]= client.get_metadata("group1", "M00/00/00/rBBln1tqkDSAKS72AAFvuzCOObk467.png");
+//		response.setHeader("content-disposition", "attachment;filename="+URLEncoder.encode(nvps[1].getValue(), "UTF-8"));
+//		ServletOutputStream outputStream = null;
+//        try {
+//            outputStream = response.getOutputStream();
+//            outputStream.write(bytes);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } finally {
+//            try {
+//                outputStream.flush();
+//                outputStream.close();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//		
+//	}
 	
 	
 	

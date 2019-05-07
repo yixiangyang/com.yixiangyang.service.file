@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.yixiangyang.service.file.com.yixiangyang.service.file.ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.006 sec <<< FAILURE! - in com.yixiangyang.service.file.com.yixiangyang.service.file.ApplicationTests
+contextLoads(com.yixiangyang.service.file.com.yixiangyang.service.file.ApplicationTests)  Time elapsed: 0.006 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.yixiangyang.service.file.com.yixiangyang.service.file.ApplicationTests.contextLoads(ApplicationTests.java:35)
+

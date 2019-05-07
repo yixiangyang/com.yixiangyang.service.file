@@ -1,0 +1,2 @@
+2018-08-17 10:01:11,753 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-08-17 10:01:14,527 INFO (DataSourceConfig.java:44)- database rule is null
